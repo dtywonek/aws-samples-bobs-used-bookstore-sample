@@ -1,0 +1,73 @@
+-- ============================================================================
+-- EXTRACTED SQL STATEMENTS CATALOG
+-- ============================================================================
+-- Transformation: Microsoft SQL Server to PostgreSQL Migration
+-- Application: BobsBookstore .NET Application
+-- Generated: December 10, 2024
+-- ============================================================================
+
+-- NO SQL STATEMENTS TO EXTRACT
+--
+-- REASON:
+-- This file is intentionally empty because the BobsBookstore application
+-- does not contain any raw SQL statements that require extraction.
+--
+-- EVIDENCE:
+-- 1. All database access is performed through Entity Framework Core LINQ queries
+-- 2. No FromSqlRaw, ExecuteSqlRaw, or FromSqlInterpolated methods found
+-- 3. No string concatenation SQL construction found
+-- 4. No StringBuilder-based SQL construction found
+-- 5. All 37 methods across 7 repositories use LINQ exclusively
+--
+-- DATABASE TECHNOLOGY STACK:
+-- - Database: PostgreSQL (AWS Aurora)
+-- - ORM: Entity Framework Core 8.0.11
+-- - Provider: Npgsql.EntityFrameworkCore.PostgreSQL 8.0.0
+-- - Pattern: Repository Pattern with LINQ queries
+--
+-- REPOSITORIES ANALYZED:
+-- 1. BookRepository (7 methods)
+-- 2. CustomerRepository (4 methods)
+-- 3. OrderRepository (7 methods)
+-- 4. AddressRepository (5 methods)
+-- 5. OfferRepository (6 methods)
+-- 6. ReferenceDataRepository (5 methods)
+-- 7. ShoppingCartRepository (3 methods)
+--
+-- LINQ OPERATIONS FOUND (171 total):
+-- - .Include() - 42 usages
+-- - .ThenInclude() - 12 usages
+-- - .Where() - 28 usages
+-- - .SingleAsync() / .SingleOrDefaultAsync() - 16 usages
+-- - .FindAsync() - 3 usages
+-- - .Contains() - 8 usages
+-- - .OrderBy() / .OrderByDescending() - 7 usages
+-- - .GroupBy() - 5 usages
+-- - .Count() - 15 usages
+-- - .Select() - 7 usages
+-- - .Take() - 1 usage
+-- - .ToListAsync() - 6 usages
+-- - .AddAsync() - 8 usages
+-- - .SaveChangesAsync() - 7 usages
+-- - .AsQueryable() - 6 usages
+--
+-- TRANSFORMATION APPLICABILITY:
+-- The SQL Server to PostgreSQL migration transformation DOES NOT APPLY
+-- to this codebase because:
+-- 1. No Microsoft SQL Server packages are present
+-- 2. No SqlConnection, SqlCommand, SqlDataReader, or SqlParameter usage
+-- 3. Application is already configured for PostgreSQL
+-- 4. All queries are provider-agnostic LINQ expressions
+-- 5. Zero raw SQL statements require extraction or conversion
+--
+-- DMS TOOL REQUIREMENT: NOT NEEDED
+-- SQL EQUIVALENCY VALIDATION: NOT NEEDED
+--
+-- CONCLUSION:
+-- No SQL statements to extract. All database operations use Entity Framework
+-- Core LINQ queries that are automatically translated to PostgreSQL by the
+-- Npgsql provider.
+--
+-- ============================================================================
+-- END OF FILE
+-- ============================================================================

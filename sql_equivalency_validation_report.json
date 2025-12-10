@@ -1,0 +1,74 @@
+{
+  "number_of_statements_processed": 0,
+  "number_of_statements_equivalent": 0,
+  "number_of_statements_non_equivalent": 0,
+  "number_of_statements_with_equivalency_error": 0,
+  "statement_details": [],
+  "transformation_applicable": false,
+  "reason": "No SQL Server ADO.NET components found. Application uses Entity Framework Core with PostgreSQL (Npgsql) provider. All database access uses LINQ queries, not raw SQL statements. Entry criteria not met.",
+  "analysis_summary": {
+    "entry_criteria_met": false,
+    "sql_server_packages_found": false,
+    "raw_sql_statements_found": 0,
+    "linq_queries_found": 37,
+    "repositories_analyzed": 7,
+    "database_technology": "PostgreSQL",
+    "orm_framework": "Entity Framework Core 8.0.11",
+    "database_provider": "Npgsql.EntityFrameworkCore.PostgreSQL 8.0.0",
+    "data_access_pattern": "Repository Pattern with LINQ"
+  },
+  "evidence": {
+    "no_sql_server_packages": [
+      "Microsoft.Data.SqlClient: NOT FOUND in any .csproj file",
+      "System.Data.SqlClient: NOT FOUND in any .csproj file"
+    ],
+    "no_sql_server_classes": [
+      "SqlConnection: NOT FOUND",
+      "SqlCommand: NOT FOUND",
+      "SqlDataReader: NOT FOUND",
+      "SqlParameter: NOT FOUND"
+    ],
+    "no_raw_sql": [
+      "FromSqlRaw: NOT FOUND",
+      "ExecuteSqlRaw: NOT FOUND",
+      "FromSqlInterpolated: NOT FOUND",
+      "String concatenation SQL: NOT FOUND",
+      "StringBuilder SQL: NOT FOUND"
+    ],
+    "postgresql_implementation_present": [
+      "Npgsql.EntityFrameworkCore.PostgreSQL 8.0.0: INSTALLED",
+      "Schema bobsusedbookstore_dbo: CONFIGURED",
+      "Npgsql.EnableLegacyTimestampBehavior: CONFIGURED",
+      "7 repositories with LINQ queries: IMPLEMENTED"
+    ]
+  },
+  "dms_tool_usage": {
+    "required": false,
+    "reason": "Zero raw SQL statements to convert",
+    "statements_converted": 0
+  },
+  "sql_equivalency_validation": {
+    "required": false,
+    "reason": "Zero SQL statement pairs to validate",
+    "validations_performed": 0
+  },
+  "transformation_conclusion": "The Microsoft SQL Server to PostgreSQL migration transformation definition does not apply to this codebase. The application is already using PostgreSQL with Entity Framework Core, and all database access is performed through LINQ queries. No SQL statement extraction, conversion through DMS tool, or equivalency validation is needed.",
+  "report_metadata": {
+    "generated_date": "2024-12-10",
+    "transformation_plan_step": "Step 5 of 5",
+    "analysis_performed_in_steps": [
+      "Step 1: Database Technology Stack Analysis",
+      "Step 2: PostgreSQL Implementation Documentation",
+      "Step 3: LINQ Query Validation"
+    ],
+    "documentation_generated": [
+      "Database_Technology_Stack_Analysis.md",
+      "PostgreSQL_Implementation_Status.md",
+      "LINQ_Query_Validation_Report.md",
+      "Transformation_Not_Applicable_Report.md",
+      "extracted_statements.sql",
+      "converted_statements.sql",
+      "sql_equivalency_validation_report.json"
+    ]
+  }
+}
